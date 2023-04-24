@@ -120,6 +120,16 @@ Ahora ya hemos cargado la base de conocimiento y sus reglas en Prolog y podemos 
 
 ¿Qué te devuelve en cada caso? Recuerda que debes de usar la sintaxis que has diseñado para Prolog. Por ejemplo, la primera pregunta sería ```ama(monica,chandler).```
 
+Por otro lado puedes hacer preguntas más genéricas y PROLOG intentará deducir la respuesta a partir de las reglas y la base de conocimiento. Por ejemplo, ¿a quién ama Mónica? 
+
+Basta con escribir ```ama(monica,X).```, de esta forma PROLOG nos dirá que valor puede tomar X. Intenta responder a las siguientes preguntas:
+
+* ¿Con quién sale Chandler?
+* ¿Con quién sale Rachel?
+* ¿De quién es amigo Joey?
+
+Prueba a escribir ```salen(X,Y).``` o ```salen(X,X).```. ¿Qué pasa?
+
 ## Depurar un programa
 Como puedes observar Prolog te devuelve directamente la respuesta a tu pregunta. Pero muchas veces podemos necesitar entender como está razonando Prolog. 
 
