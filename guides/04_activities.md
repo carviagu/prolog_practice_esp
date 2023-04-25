@@ -102,3 +102,66 @@ segundo(Y):-pescado(Y).
 ```
 ¿Cómo podemos obtener solo aquellas comidas en las que el segundo plato es la lubina?
 
+**Ejercicio 7**
+---
+Dada la siguiente base de conocimiento:
+
+```prolog
+padece(pedro,gripe).
+padece(pedro,hepatitis).
+padece(juan,hepatitis).
+padece(maria,intoxicacion).
+
+sintoma(fiebre,gripe).
+sintoma(cansancio,hepatitis).
+sintoma(vomito,intoxicacion).
+sintoma(cansancio,gripe).
+
+suprime(aspirina,fiebre).
+suprime(motilium,vomito).
+```
+Añade las siguientes reglas:
+1. Si una enfermedad tiene un síntoma y un medicamento suprime ese sintoma, entonces el medicamento alivia esa enfermedad. 
+
+2. Si alguien padece una enfermedad y un medicamento alivia esa enfermedad entonces esa persona debe de tomar el medicamento. 
+
+Después indica como podrías saber que sintomas presenta pedro. 
+
+**Ejercicio 8**
+---
+Tenemos las personas de una fiesta, definidas por el predicado hombre() y mujer()
+```prolog
+hombre(alfredo).
+hombre(felipe).
+hombre(francisco).
+mujer(sonia).
+mujer(eva).
+mujer(carmen).
+```
+
+Tenemos las bebidas que toma cada invitado mediante el predicado bebe()
+```prolog
+bebe(alfredo, whisky).
+bebe(alfredo, ron_cola).
+bebe(felipe, cerveza).
+bebe(felipe, gin_tonic).
+bebe(felipe,ron_cola).
+bebe(francisco, vino).
+bebe(francisco, malibu).
+bebe(sonia, gin_tonic).
+bebe(sonia, malibu).
+bebe(eva, vino).
+bebe(eva, cerveza).
+bebe(carmen, whisky).
+bebe(carmen, ron_cola).
+```
+**Parte A**
+
+Define el predicado ```pareja(X,Y)``` que exprese que dos personas son pareja cuando X es un hombre e Y un mujer y tengan al menos una bebida favorita en común. También define el predicado ```pareja2(X,Y)``` que se satisface cuando X e Y tienen al menos dos bebidas favoritas en común. 
+
+**Parte B**
+
+Añade ahora dos nuevas premisas...
+
+1. Pepe bebe cualquier cosa que beba Alfredo. 
+2. Elena bebe cualquier cosa que beban Sonia o Felipe. 
